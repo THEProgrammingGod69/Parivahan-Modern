@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parivahan - Vehicle Services</title>
+    <style>
+        :root {
+            --primary-color: #004080;
+            --secondary-color: #0066cc;
+            --accent-color: #ff6b6b;
+            --background-light: #f8f9fa;
+            --text-dark: #343a40;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(0, 64, 128, 0.9), rgba(0, 64, 128, 0.9)), url('https://source.unsplash.com/1600x900/?vehicle,car') center/cover;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .process-steps {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="Parivahan_home.html" class="logo">Parivahan Sewa</a>
+            <h1>Vehicle Services</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="Parivahan_home.html">Home</a>
+            <a href="#registration">Registration</a>
+            <a href="#transfer">Ownership Transfer</a>
+            <a href="#tax">Road Tax</a>
+            <a href="#pollution">Pollution Certificate</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Vehicle Related Services</h1>
+        <p>Comprehensive solutions for all your vehicle documentation needs</p>
+    </div>
+
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-card" id="registration">
+                <div class="service-icon">🚗</div>
+                <h3>Vehicle Registration</h3>
+                <p>Register your new vehicle or renew existing registration with our streamlined process. Get your vehicle documents in order quickly and efficiently.</p>
+                <a href="#" class="btn">Start Registration</a>
+            </div>
+
+            <div class="service-card" id="transfer">
+                <div class="service-icon">📝</div>
+                <h3>Transfer of Ownership</h3>
+                <p>Transfer vehicle ownership seamlessly with our guided process. Ensure proper documentation and legal compliance.</p>
+                <a href="#" class="btn">Transfer Ownership</a>
+            </div>
+
+            <div class="service-card" id="tax">
+                <div class="service-icon">💰</div>
+                <h3>Road Tax Payment</h3>
+                <p>Calculate and pay your road tax online. Stay compliant with state regulations and avoid penalties.</p>
+                <a href="#" class="btn">Pay Road Tax</a>
+            </div>
+
+            <div class="service-card" id="pollution">
+                <div class="service-icon">🌿</div>
+                <h3>Pollution Certificate</h3>
+                <p>Get your vehicle's pollution under control certificate. Contribute to a cleaner environment.</p>
+                <a href="#" class="btn">Get Certificate</a>
+            </div>
+        </div>
+
+        <div class="process-steps">
+            <h2>How It Works</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Choose Your Service</h3>
+                    <p>Select the vehicle-related service you need from our comprehensive list of offerings.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Submit Documents</h3>
+                    <p>Upload the required documents and fill in the necessary information.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Pay Fees</h3>
+                    <p>Make secure online payment for the selected service.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Get Confirmation</h3>
+                    <p>Receive your digital confirmation and track your application status.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: support@parivahan.gov.in</p>
+                <p>Helpline: 1800-123-4567</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#" style="color: white;">FAQ</a></p>
+                <p><a href="#" style="color: white;">Terms & Conditions</a></p>
+                <p><a href="#" style="color: white;">Privacy Policy</a></p>
+            </div>
+            <div>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

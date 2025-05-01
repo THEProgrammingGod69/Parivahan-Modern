@@ -1,0 +1,127 @@
+HTML and CSS Documentation for Parivahan Website
+
+HTML Tags Used:
+
+1. <!DOCTYPE html>
+   - Declares the document type and version of HTML being used (HTML5)
+
+2. <html lang="en">
+   - Root element of the HTML document
+   - lang attribute specifies English as the document language
+
+3. <head>
+   - Contains metadata about the document
+   - Houses title, character encoding, viewport settings, and styles
+
+4. <meta>
+   - Provides metadata about the HTML document
+   - charset: Specifies character encoding
+   - viewport: Controls viewport behavior on mobile devices
+
+5. <title>
+   - Sets the page title shown in browser tab/window
+
+6. <style>
+   - Contains CSS rules for styling the document
+
+7. <body>
+   - Contains all visible content of the webpage
+
+8. <header>
+   - Represents introductory content
+   - Contains logo and site title
+
+9. <nav>
+   - Navigation section with links to different pages
+   - Implements sticky positioning for better UX
+
+10. <div>
+    - Generic container for grouping elements
+    - Used with classes for specific styling purposes:
+      - header-content: Centers and structures header elements
+      - nav-content: Organizes navigation links
+      - container: Main content wrapper
+      - service-grid: Grid layout for service cards
+      - service-card: Individual service information blocks
+      - news-section: Latest updates section
+      - footer-content: Footer layout structure
+
+11. <a>
+    - Creates hyperlinks to other pages or sections
+    - Used in navigation menu and call-to-action buttons
+
+12. <h1>, <h2>, <h3>
+    - Heading elements for different levels of content hierarchy
+    - Used for titles and section headings
+
+13. <p>
+    - Paragraph element for text content
+
+CSS Properties and Features:
+
+1. CSS Variables (Custom Properties)
+   - --primary-color: Main brand color
+   - --secondary-color: Secondary brand color
+   - --accent-color: Highlight color
+   - --background-light: Background color
+   - --text-dark: Text color
+   - --shadow: Box shadow value
+
+2. Box Model Properties
+   - margin: Controls spacing outside elements
+   - padding: Controls spacing inside elements
+   - box-sizing: border-box for predictable sizing
+
+3. Typography
+   - font-family: Sets font stack
+   - font-size: Controls text size
+   - font-weight: Controls text thickness
+   - line-height: Sets line spacing
+   - color: Sets text color
+
+4. Layout
+   - display: flex/grid for modern layouts
+   - justify-content: Aligns items horizontally
+   - align-items: Aligns items vertically
+   - gap: Sets spacing between grid/flex items
+   - max-width: Controls maximum content width
+
+5. Grid System
+   - display: grid
+   - grid-template-columns: Creates responsive columns
+   - gap: Sets spacing between grid items
+
+6. Flexbox
+   - display: flex
+   - flex-direction: Controls flex container direction
+   - flex-wrap: Handles item wrapping
+
+7. Positioning
+   - position: sticky/relative/absolute
+   - top, z-index: Controls element stacking
+
+8. Background
+   - background-color: Sets solid colors
+   - background: For gradients and images
+   - linear-gradient: Creates color gradients
+
+9. Effects
+   - box-shadow: Adds depth to elements
+   - transform: For hover animations
+   - transition: Smooths property changes
+
+10. Border and Border Radius
+    - border-radius: Rounds corners
+    - border: Sets element borders
+
+11. Responsive Design
+    - @media queries: Adapts layout for different screen sizes
+    - Fluid typography and spacing
+    - Flexible grid systems
+
+12. Hover Effects
+    - :hover pseudo-class
+    - transform: translateY()
+    - background-color transitions
+
+This documentation covers the main HTML and CSS features used to create the responsive, professional-looking Parivahan website. The combination of semantic HTML structure and modern CSS techniques ensures a maintainable and user-friendly web application.

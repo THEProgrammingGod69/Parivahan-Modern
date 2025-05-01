@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parivahan - Informational Services</title>
+    <style>
+        :root {
+            --primary-color: #004080;
+            --secondary-color: #0066cc;
+            --accent-color: #ff6b6b;
+            --background-light: #f8f9fa;
+            --text-dark: #343a40;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(0, 64, 128, 0.9), rgba(0, 64, 128, 0.9)), url('https://source.unsplash.com/1600x900/?traffic,education') center/cover;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .info-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-content {
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .info-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="Parivahan_home.html" class="logo">Parivahan Sewa</a>
+            <h1>Informational Services</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="Parivahan_home.html">Home</a>
+            <a href="#rules">Traffic Rules</a>
+            <a href="#safety">Road Safety</a>
+            <a href="#education">Education</a>
+            <a href="#resources">Resources</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Knowledge & Resources</h1>
+        <p>Essential information for safe and responsible driving</p>
+    </div>
+
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-card" id="rules">
+                <div class="service-icon">📋</div>
+                <h3>Traffic Rules & Regulations</h3>
+                <p>Comprehensive guide to traffic rules, signals, and road markings as per Indian Motor Vehicles Act.</p>
+                <a href="#" class="btn">Learn Rules</a>
+            </div>
+
+            <div class="service-card" id="safety">
+                <div class="service-icon">🛡️</div>
+                <h3>Road Safety Guidelines</h3>
+                <p>Essential safety tips, best practices, and guidelines for all road users to prevent accidents.</p>
+                <a href="#" class="btn">Safety Guide</a>
+            </div>
+
+            <div class="service-card" id="education">
+                <div class="service-icon">📚</div>
+                <h3>Driver Education</h3>
+                <p>Educational resources, training materials, and practice tests for aspiring drivers.</p>
+                <a href="#" class="btn">Start Learning</a>
+            </div>
+
+            <div class="service-card" id="resources">
+                <div class="service-icon">📱</div>
+                <h3>Digital Resources</h3>
+                <p>Access downloadable forms, manuals, and mobile apps for convenient learning.</p>
+                <a href="#" class="btn">View Resources</a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>Important Information</h2>
+            <div class="info-content">
+                <div class="info-item">
+                    <h3>Traffic Signs & Signals</h3>
+                    <p>Learn about mandatory signs, cautionary signs, and informative signs used on Indian roads. Understand traffic signal patterns and their meanings.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Vehicle Documentation</h3>
+                    <p>Know about essential documents required while driving, including registration certificate, insurance, and pollution certificate.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Emergency Procedures</h3>
+                    <p>Guidelines for handling road emergencies, accident reporting procedures, and important emergency contact numbers.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Environmental Guidelines</h3>
+                    <p>Information about emission norms, eco-friendly driving practices, and vehicle maintenance for environmental protection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: info@parivahan.gov.in</p>
+                <p>Helpline: 1800-123-4567</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#" style="color: white;">Download Forms</a></p>
+                <p><a href="#" style="color: white;">Study Material</a></p>
+                <p><a href="#" style="color: white;">FAQs</a></p>
+            </div>
+            <div>
+                <h3>Resources</h3>
+                <p><a href="#" style="color: white;">Mobile Apps</a></p>
+                <p><a href="#" style="color: white;">Video Tutorials</a></p>
+                <p><a href="#" style="color: white;">Publications</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parivahan - Home</title>
+    <style>
+        :root {
+            --primary-color: #004080;
+            --secondary-color: #0066cc;
+            --accent-color: #ff6b6b;
+            --background-light: #f8f9fa;
+            --text-dark: #343a40;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(0, 64, 128, 0.9), rgba(0, 64, 128, 0.9)), url('https://source.unsplash.com/1600x900/?transport,india') center/cover;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .news-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Parivahan Sewa</div>
+            <p>Transport Services Portal of India</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="Parivahan_home.html">Home</a>
+            <a href="license_services.html">License Services</a>
+            <a href="vehicle_services.html">Vehicle Services</a>
+            <a href="informational_services.html">Information</a>
+            <a href="public_media.html">Public Media</a>
+            <a href="other_services.html">Other Services</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to Parivahan Sewa</h1>
+        <p>Your one-stop destination for all transport-related services in India</p>
+    </div>
+
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">🪪</div>
+                <h3>License Services</h3>
+                <p>Apply for new license, renewals, and international permits</p>
+                <a href="license_services.html" class="btn">Access Services</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Vehicle Services</h3>
+                <p>Registration, ownership transfer, and vehicle management</p>
+                <a href="vehicle_services.html" class="btn">Manage Vehicle</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Information Services</h3>
+                <p>Traffic rules, safety guidelines, and educational resources</p>
+                <a href="informational_services.html" class="btn">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Public Media</h3>
+                <p>News, updates, and public announcements</p>
+                <a href="public_media.html" class="btn">Stay Updated</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>Other Services</h3>
+                <p>Additional transport and vehicle-related services</p>
+                <a href="other_services.html" class="btn">View Services</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Quick Services</h3>
+                <p>Pay challans, check status, and download forms</p>
+                <a href="#" class="btn">Quick Access</a>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <h2>Latest Updates</h2>
+            <p>Stay informed about the latest transport policies, notifications, and services</p>
+            <div style="margin-top: 1rem;">
+                <a href="#" class="btn">View All Updates</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: support@parivahan.gov.in</p>
+                <p>Helpline: 1800-123-4567</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#" style="color: white;">Download Forms</a></p>
+                <p><a href="#" style="color: white;">Track Application</a></p>
+                <p><a href="#" style="color: white;">FAQs</a></p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p><a href="#" style="color: white;">Facebook</a></p>
+                <p><a href="#" style="color: white;">Twitter</a></p>
+                <p><a href="#" style="color: white;">Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

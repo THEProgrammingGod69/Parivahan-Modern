@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parivahan - Public Media</title>
+    <style>
+        :root {
+            --primary-color: #004080;
+            --secondary-color: #0066cc;
+            --accent-color: #ff6b6b;
+            --background-light: #f8f9fa;
+            --text-dark: #343a40;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(0, 64, 128, 0.9), rgba(0, 64, 128, 0.9)), url('https://source.unsplash.com/1600x900/?transport,news') center/cover;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .news-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .news-date {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="Parivahan_home.html" class="logo">Parivahan Sewa</a>
+            <h1>Public Media</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="Parivahan_home.html">Home</a>
+            <a href="#news">Latest News</a>
+            <a href="#press">Press Releases</a>
+            <a href="#campaigns">Campaigns</a>
+            <a href="#gallery">Media Gallery</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Media & Communications</h1>
+        <p>Stay updated with the latest news and developments in transport sector</p>
+    </div>
+
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-card" id="news">
+                <div class="service-icon">📰</div>
+                <h3>Latest News</h3>
+                <p>Get the latest updates about transport policies, regulations, and initiatives from the Ministry of Road Transport.</p>
+                <a href="#" class="btn">Read News</a>
+            </div>
+
+            <div class="service-card" id="press">
+                <div class="service-icon">📢</div>
+                <h3>Press Releases</h3>
+                <p>Official communications and announcements from the transport department regarding new policies and developments.</p>
+                <a href="#" class="btn">View Releases</a>
+            </div>
+
+            <div class="service-card" id="campaigns">
+                <div class="service-icon">🎯</div>
+                <h3>Safety Campaigns</h3>
+                <p>Information about ongoing road safety campaigns, awareness programs, and public initiatives.</p>
+                <a href="#" class="btn">View Campaigns</a>
+            </div>
+
+            <div class="service-card" id="gallery">
+                <div class="service-icon">🖼️</div>
+                <h3>Media Gallery</h3>
+                <p>Access photos, videos, and other media resources related to transport initiatives and events.</p>
+                <a href="#" class="btn">Browse Gallery</a>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <h2>Recent Updates</h2>
+            <div class="news-item">
+                <div class="news-date">15 Mar 2024</div>
+                <div class="news-content">
+                    <h3>New Vehicle Registration Guidelines</h3>
+                    <p>Ministry announces updated guidelines for vehicle registration process to enhance efficiency and transparency.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">12 Mar 2024</div>
+                <div class="news-content">
+                    <h3>Road Safety Week Campaign</h3>
+                    <p>National Road Safety Week campaign launched to promote awareness about traffic rules and safe driving practices.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">10 Mar 2024</div>
+                <div class="news-content">
+                    <h3>Digital Services Enhancement</h3>
+                    <p>New digital services added to Parivahan portal for improved user experience and faster processing.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">08 Mar 2024</div>
+                <div class="news-content">
+                    <h3>Electric Vehicle Policy Update</h3>
+                    <p>Government announces new incentives for electric vehicle adoption and charging infrastructure development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: media@parivahan.gov.in</p>
+                <p>Press: press@parivahan.gov.in</p>
+                <p>Helpline: 1800-123-4567</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#" style="color: white;">Media Kit</a></p>
+                <p><a href="#" style="color: white;">Press Contacts</a></p>
+                <p><a href="#" style="color: white;">Privacy Policy</a></p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p>Twitter: @Parivahan_India</p>
+                <p>Facebook: /ParivahanSewa</p>
+                <p>Instagram: @parivahan.india</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
